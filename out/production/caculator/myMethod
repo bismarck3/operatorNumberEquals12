@@ -1,0 +1,8 @@
+((number1 operator number2) operator number3) operator number4
+1. 计算数字的排列组合
+2. 计算四则运算的排列组合
+3. 计算数字四则运算结果
+
+方法：
+1.for循环：次数固定，不灵活，简单
+2.递归：次数可以变化，灵活，需要思路清晰
