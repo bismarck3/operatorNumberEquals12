@@ -8,6 +8,7 @@ import java.util.Objects;
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
+import java.util.regex.Pattern;
 
 /**
  * com.thunisoft.wangjing_1.Point24Calculator
@@ -27,23 +28,52 @@ import java.util.function.Function;
  **/
 public class Point24Calculator {
 
-    private final static Integer NUMBER_RESULT = 24;
+    private final static int NUMBER_RESULT = 24;
 
     private final static int REQUIRE_NUMBER_SIZE = 4;
 
+    private final static int ALLOW_MAX_NUMBER = 10;
+
     private static Map<Character, BinaryOperator<Integer>> operate = new HashMap<Character, BinaryOperator<Integer>>(){{
-        operate.put('+',(number1, number2) -> number1 + number2);
-        operate.put('-',(number1, number2) -> number1 - number2);
-        operate.put('*',(number1, number2) -> number1 * number2);
-        operate.put('/',(number1, number2) -> number1 / number2);
+        put('+',(number1, number2) -> number1 + number2);
+        put('-',(number1, number2) -> number1 - number2);
+        put('*',(number1, number2) -> number1 * number2);
+        put('/',(number1, number2) -> number1 / number2);
     }};
+
+
+
+
+    public static void main(String[] args) {
+        if(!checkParamLength(args) || !isAllNumberOneToTen(args)){
+            System.err.println("输入的参数不合法，请输入4个1-10的正整数，并且按照java命令行参数规范，用空格分开。");
+            System.exit(1);
+        }
+        operatorNumbers(getNumberAllOrders(initArgs(args)));
+    }
+
+    private static boolean checkParamLength(String[] args){
+        return args.length <= REQUIRE_NUMBER_SIZE;
+    }
+
+    private static boolean isAllNumberOneToTen(String[] args) {
+        Pattern pattern = Pattern.compile("[1-9][0-9]+");
+        for (int i = 0; i < args.length; i++) {
+            if(!pattern.matcher(args[i]).matches()){
+                return false;
+            }else if (Integer.valueOf(args[i])>ALLOW_MAX_NUMBER){
+                return false;
+            }
+        }
+        return true;
+    }
 
     private static int[] initArgs(String[] args){
         return new int[]{Integer.valueOf(args[0]), Integer.valueOf(args[1]),
-            Integer.valueOf(args[2]), Integer.valueOf(args[3])};
+                Integer.valueOf(args[2]), Integer.valueOf(args[3])};
     }
 
-    private static List<int[]> getNumberOrders(int[] number){
+    private static List<int[]> getNumberAllOrders(int[] number){
         // 四种数字的排列组合
         List<int[]> result = new ArrayList<>();
         for(int i = 0; i < number.length; i++){
@@ -62,9 +92,8 @@ public class Point24Calculator {
         return operate.get(operator).apply(number1, number2);
     }
 
-    private static void sum24(int[] numbers){
+    private static void operatorNumbers(List<int[]> numberOrders){
         char[] operators = new char[]{'+', '-', '*', '/'};
-        List<int[]> numberOrders = getNumberOrders(numbers);
         // 循环所有数字排列情况
         for (int i = 0; i < numberOrders.size(); i++){
             int[] caculator = numberOrders.get(i);
@@ -83,13 +112,4 @@ public class Point24Calculator {
             }
         }
     }
-
-
-    public static void main(String[] args) {
-        if(args.length < REQUIRE_NUMBER_SIZE){
-            System.exit(1);
-        }
-        sum24(initArgs(args));
-    }
-
 }
