@@ -14,9 +14,17 @@ import java.util.regex.Pattern;
 /**
  * com.thunisoft.wangjing_1.Point24Calculator
  *
- * @description 输入4个(0,10]的正整数,四则运算得到24,列出所有的集合 想法： (( number1 operator number2) operator number3) operator number4 1.
- *              计算数字的排列组合 2. 四则运算穷举 3. 计算数字四则运算结果 方法： 1.for循环：次数固定，不灵活，简单 2.递归：次数可以变化，灵活，需要思路清晰 校验：正则校验，参数合法性
- *              1.长度（4个），符合args 2.数字范围1-10
+ * @description 输入4个(0,10]的正整数,四则运算得到24,列出所有的集合 想法： (( number1 operator number2) operator number3) operator number4
+ * 步骤：
+ *      1.计算数字的排列组合
+ *      2. 四则运算穷举
+ *      3. 计算数字四则运算结果
+ * 方法：
+ *      1.for循环：次数固定，不灵活，简单
+ *      2.递归：次数可以变化，灵活，需要思路清晰
+ * 校验：正则校验，参数合法性
+ *       1.长度（4个），符合args
+ *       2.数字范围1-10
  * @author wangjing-1
  * @date 2019/7/4 18:19
  * @version v1.0.0
@@ -96,6 +104,24 @@ public class Point24Calculator {
             }
         }
         return result;
+    }
+
+    private static void operatenNumber(char operator, int[] numbers, int position, List<Object> result, int sum){
+        if(position == numbers.length-1){
+            result.add(numbers[position++]);
+            if(sum == NUMBER_RESULT){
+                System.out.println("(((" + result.get(0) + operators[j] + calculateNumbers[1] + ")"
+                    + operators[k] + calculateNumbers[2] + ")" + operators[p] + calculateNumbers[3] + ") = "
+                    + NUMBER_RESULT);
+            }
+            return;
+        }
+        for(int i = 0; i < operators.length; i ++){
+            result.add(numbers[position]);
+            result.add(operator);
+            int temp = calculateAndGet(numbers[position], numbers[position++], operator);
+            operatenNumber(numbers[position], numbers[position++], operator, temp);
+        }
     }
 
     private static List<int[]> getNumberAllOrders(int[] number) {
