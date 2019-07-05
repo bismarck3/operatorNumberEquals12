@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e267472-5e35-4c3f-bd86-8f4ff2db4a97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PatternTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="2e267472-5e35-4c3f-bd86-8f4ff2db4a97" name="Default Changelist" comment="美化代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/thunisoft/wangjing_1/Point24Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/thunisoft/wangjing_1/Point24Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myMethod" beforeDir="false" afterPath="$PROJECT_DIR$/src/myMethod" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,11 +20,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/thunisoft/wangjing_1/Point24Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="106" column="62" lean-forward="true" selection-start-line="106" selection-start-column="62" selection-end-line="106" selection-end-column="62" />
+            <state relative-caret-position="262">
+              <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
               <folding>
-                <element signature="e#1569#1570#0" expanded="true" />
-                <element signature="e#1626#1627#0" expanded="true" />
+                <element signature="e#2019#2020#0" expanded="true" />
+                <element signature="e#2076#2077#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/logging/Logger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="1596" column="16" selection-start-line="1596" selection-start-column="16" selection-end-line="1596" selection-end-column="16" />
+              <folding>
+                <element signature="e#68708#68709#0" expanded="true" />
+                <element signature="e#68752#68753#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,7 +56,7 @@
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Map.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
-              <caret line="209" column="43" lean-forward="true" selection-start-line="209" selection-start-column="43" selection-end-line="209" selection-end-column="43" />
+              <caret line="209" column="43" selection-start-line="209" selection-start-column="43" selection-end-line="209" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -57,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/src/myMethod">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
-              <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -65,7 +73,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Caculator2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="-983">
               <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#2400#2401#0" expanded="true" />
@@ -78,8 +86,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PatternTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="19" column="70" lean-forward="true" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="70" />
+            <state relative-caret-position="351">
+              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -177,7 +188,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.PatternTest">
+  <component name="RunManager" selected="Application.Point24Calculator">
     <configuration name="Caculator2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Caculator2" />
       <module name="operatorNumberEquals12" />
@@ -207,8 +218,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PatternTest" />
         <item itemvalue="Application.Point24Calculator" />
+        <item itemvalue="Application.PatternTest" />
         <item itemvalue="Application.Caculator2" />
       </list>
     </recent_temporary>
@@ -226,7 +237,7 @@
       <workItem from="1562031326346" duration="2863000" />
       <workItem from="1562034496453" duration="3602000" />
       <workItem from="1562067686330" duration="2166000" />
-      <workItem from="1562235454415" duration="5469000" />
+      <workItem from="1562235454415" duration="7165000" />
     </task>
     <task id="LOCAL-00001" summary="修改逻辑">
       <created>1562246760690</created>
@@ -235,17 +246,24 @@
       <option name="project" value="LOCAL" />
       <updated>1562246760690</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修改校验，完善method">
+      <created>1562291775815</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1562291775815</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14100000" />
+    <option name="totallyTimeSpent" value="15796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1615215" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13616318" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -254,7 +272,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32952183" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.124740124" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17775467" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.23388773" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -262,8 +280,8 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="bottom" id="SonarLint" order="11" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32952183" />
+      <window_info anchor="bottom" id="SonarLint" order="11" weight="0.22349273" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -284,22 +302,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改逻辑" />
+    <MESSAGE value="修改校验，完善method" />
+    <MESSAGE value="美化代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="美化代码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/thunisoft/wangjing_1/Point24Calculator.java</url>
-          <line>113</line>
+          <line>108</line>
           <properties />
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/thunisoft/wangjing_1/Point24Calculator.java</url>
-          <line>118</line>
-          <properties />
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -327,7 +341,7 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="209" column="43" lean-forward="true" selection-start-line="209" selection-start-column="43" selection-end-line="209" selection-end-column="43" />
+          <caret line="209" column="43" selection-start-line="209" selection-start-column="43" selection-end-line="209" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -338,9 +352,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/myMethod">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Caculator2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="-983">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#2400#2401#0" expanded="true" />
@@ -351,25 +372,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PatternTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="19" column="70" lean-forward="true" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="70" />
+        <state relative-caret-position="351">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/myMethod">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/logging/Logger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        <state relative-caret-position="257">
+          <caret line="1596" column="16" selection-start-line="1596" selection-start-column="16" selection-end-line="1596" selection-end-column="16" />
+          <folding>
+            <element signature="e#68708#68709#0" expanded="true" />
+            <element signature="e#68752#68753#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thunisoft/wangjing_1/Point24Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="106" column="62" lean-forward="true" selection-start-line="106" selection-start-column="62" selection-end-line="106" selection-end-column="62" />
+        <state relative-caret-position="262">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
           <folding>
-            <element signature="e#1569#1570#0" expanded="true" />
-            <element signature="e#1626#1627#0" expanded="true" />
+            <element signature="e#2019#2020#0" expanded="true" />
+            <element signature="e#2076#2077#0" expanded="true" />
           </folding>
         </state>
       </provider>
