@@ -22,6 +22,9 @@ import java.util.regex.Pattern;
  * 方法：
  * 1.for循环：次数固定，不灵活，简单
  * 2.递归：次数可以变化，灵活，需要思路清晰
+ * 校验：正则校验，参数合法性
+ * 1.长度（4个），符合args
+ * 2.数字范围1-10
  * @author wangjing-1
  * @date 2019/7/4 18:19
  * @version v1.0.0
@@ -33,6 +36,8 @@ public class Point24Calculator {
     private final static int REQUIRE_NUMBER_SIZE = 4;
 
     private final static int ALLOW_MAX_NUMBER = 10;
+
+    private final static String NUMBER_ONE_TO_TEN_PATTERN = "[1-9][0]?";
 
     private static Map<Character, BinaryOperator<Integer>> operate = new HashMap<Character, BinaryOperator<Integer>>(){{
         put('+',(number1, number2) -> number1 + number2);
@@ -49,7 +54,7 @@ public class Point24Calculator {
             System.err.println("输入的参数不合法，请输入4个1-10的正整数，并且按照java命令行参数规范，用空格分开。");
             System.exit(1);
         }
-        operatorNumbers(getNumberAllOrders(initArgs(args)));
+        operateNumbers(getNumberAllOrders(initArgs(args)));
     }
 
     private static boolean checkParamLength(String[] args){
@@ -57,7 +62,7 @@ public class Point24Calculator {
     }
 
     private static boolean isAllNumberOneToTen(String[] args) {
-        Pattern pattern = Pattern.compile("[1-9][0-9]+");
+        Pattern pattern = Pattern.compile(NUMBER_ONE_TO_TEN_PATTERN);
         for (int i = 0; i < args.length; i++) {
             if(!pattern.matcher(args[i]).matches()){
                 return false;
@@ -88,11 +93,7 @@ public class Point24Calculator {
         return result;
     }
 
-    private static int caculateAndGet(int number1, int number2, Character operator){
-        return operate.get(operator).apply(number1, number2);
-    }
-
-    private static void operatorNumbers(List<int[]> numberOrders){
+    private static void operateNumbers(List<int[]> numberOrders){
         char[] operators = new char[]{'+', '-', '*', '/'};
         // 循环所有数字排列情况
         for (int i = 0; i < numberOrders.size(); i++){
@@ -100,16 +101,20 @@ public class Point24Calculator {
             // 循环所有操作符
             for(int j = 0; j < operators.length; j++){
                 // 计算，获取临时计算结果，再计算
-                int tempResult12 = caculateAndGet(caculator[0], caculator[1], operators[j]);
+                int tempNumber12Result = caculateAndGet(caculator[0], caculator[1], operators[j]);
                 for(int k = 0; k < caculator.length; k++){
-                    int tempReulst123 = caculateAndGet(tempResult12, caculator[2], operators[k]);
+                    int tempNumber123Reulst = caculateAndGet(tempNumber12Result, caculator[2], operators[k]);
                     for(int p = 0; p < caculator.length; p++){
-                        if(Objects.equals(NUMBER_RESULT, caculateAndGet(tempReulst123, caculator[3], operators[p]))){
+                        if(Objects.equals(NUMBER_RESULT, caculateAndGet(tempNumber123Reulst, caculator[3], operators[p]))){
                             System.out.println("((("+caculator[0] +operators[j] + caculator[1]+")"+operators[k]+ caculator[2]+")"+operators[p]+caculator[3]+") = "+NUMBER_RESULT);
                         }
                     }
                 }
             }
         }
+    }
+
+    private static int caculateAndGet(int number1, int number2, Character operator){
+        return operate.get(operator).apply(number1, number2);
     }
 }
