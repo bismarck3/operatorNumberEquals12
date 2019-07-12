@@ -45,6 +45,25 @@ public class Caculator2 {
 
     }
 
+
+//    private static void operatenNumber(char operator, int[] numbers, int position, List<Object> result, int sum){
+//        if(position == numbers.length-1){
+//            result.add(numbers[position++]);
+//            if(sum == NUMBER_RESULT){
+//                System.out.println("(((" + result.get(0) + operators[j] + calculateNumbers[1] + ")"
+//                    + operators[k] + calculateNumbers[2] + ")" + operators[p] + calculateNumbers[3] + ") = "
+//                    + NUMBER_RESULT);
+//            }
+//            return;
+//        }
+//        for(int i = 0; i < operators.length; i ++){
+//            result.add(numbers[position]);
+//            result.add(operator);
+//            int temp = calculateAndGet(numbers[position], numbers[position++], operator);
+//            operatenNumber(numbers[position], numbers[position++], operator, temp);
+//        }
+//    }
+
     private static void sum12(int[] numbers){
         char[] operators = new char[]{'+', '-', '*', '/'};
         List<int[]> numberOrders = new ArrayList<>();

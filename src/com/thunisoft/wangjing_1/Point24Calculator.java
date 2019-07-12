@@ -62,7 +62,7 @@ public class Point24Calculator {
     }
 
     private static boolean checkParamLength(String[] args) {
-        return args.length <= REQUIRE_NUMBER_SIZE;
+        return args.length == REQUIRE_NUMBER_SIZE;
     }
 
     private static boolean isAllNumberOneToTen(String[] args) {
@@ -104,24 +104,6 @@ public class Point24Calculator {
             }
         }
         return result;
-    }
-
-    private static void operatenNumber(char operator, int[] numbers, int position, List<Object> result, int sum){
-        if(position == numbers.length-1){
-            result.add(numbers[position++]);
-            if(sum == NUMBER_RESULT){
-                System.out.println("(((" + result.get(0) + operators[j] + calculateNumbers[1] + ")"
-                    + operators[k] + calculateNumbers[2] + ")" + operators[p] + calculateNumbers[3] + ") = "
-                    + NUMBER_RESULT);
-            }
-            return;
-        }
-        for(int i = 0; i < operators.length; i ++){
-            result.add(numbers[position]);
-            result.add(operator);
-            int temp = calculateAndGet(numbers[position], numbers[position++], operator);
-            operatenNumber(numbers[position], numbers[position++], operator, temp);
-        }
     }
 
     private static List<int[]> getNumberAllOrders(int[] number) {
